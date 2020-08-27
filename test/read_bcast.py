@@ -41,7 +41,7 @@ m_1 = serialize_strip(leds)
 m = generate_frame_message(m_1)
 s.sendto(m, addr)
 
-"""while True:
+while True:
     for i in range(len(leds)):
         leds[i] = [255, 0, 0]
         m_1 = serialize_strip(leds)
@@ -49,8 +49,8 @@ s.sendto(m, addr)
         s.sendto(m, addr)
         time.sleep(DELAY)
     for i in range(len(leds)):
-        leds[i] = [0, 255, 255]
+        leds[i] = [0, 255, 0]
         m_1 = serialize_strip(leds)
         m = generate_frame_message(m_1)
         s.sendto(m, addr)
-        time.sleep(DELAY)"""
+        time.sleep(DELAY)

@@ -20,7 +20,7 @@ for i in range(0, numdevices):
             print("Input Device id ", i, " - ", p.get_device_info_by_host_api_device_index(0, i).get('name'))
 exit()"""
 stream=p.open(format=pyaudio.paInt16,channels=1,rate=RATE,input=True,
-              frames_per_buffer=CHUNK, input_device_index=7) #uses default input device
+              frames_per_buffer=CHUNK) #uses default input device
 m = interp1d([0,6000],[0,36])
 current_data = 0
 
